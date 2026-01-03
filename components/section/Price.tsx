@@ -4,47 +4,58 @@ import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 
 const plans = [
-  {
-    name: "Bronze",
-    price: "Rp 1.500.000+",
-    subtitle: "Website Dasar & Cepat Online",
-    description:
-      "Solusi cepat untuk bisnis yang ingin segera hadir secara profesional di dunia digital.",
-    features: [
-      "Landing page / website statis",
-      "WordPress / HTML sederhana",
-      "Informasi bisnis & layanan",
-      "Halaman kontak",
-    ],
-  },
-  {
-    name: "Silver",
-    price: "Rp 4.000.000+",
-    subtitle: "Website Interaktif & Operasional",
-    popular: true,
-    description:
-      "Website yang lebih interaktif untuk mendukung operasional dan pengelolaan konten bisnis.",
-    features: [
-      "Dashboard input data",
-      "Form terhubung WhatsApp",
-      "Halaman lebih lengkap & detail",
-      "Struktur konten rapi",
-    ],
-  },
-  {
-    name: "Gold",
-    price: "Rp 8.000.000+",
-    subtitle: "Sistem Web & Otomasi Bisnis",
-    description:
-      "Solusi sistem web kompleks untuk otomatisasi proses dan pengolahan data bisnis.",
-    features: [
-      "Dashboard kompleks",
-      "Chart & visual data",
-      "CRUD & manipulasi konten",
-      "Integrasi pembayaran & ongkir",
-      "Data real-time ke dashboard",
-    ],
-  },
+{
+  name: "Bronze",
+  price: "Rp 500.000 – Rp 1.200.000",
+  subtitle: "Website Simple untuk Mulai Online",
+  description:
+    "Paket paling efisien untuk bisnis yang ingin tampil profesional secara online tanpa fitur rumit. Fokus pada kehadiran, kejelasan informasi, dan kepercayaan dasar.",
+  suitableFor:
+    "UMKM, usaha baru, personal brand, jasa lokal yang butuh website cepat dan terjangkau.",
+  features: [
+    "Landing page / website sederhana (1–3 halaman)",
+    "Desain rapi & mobile friendly",
+    "Informasi bisnis, layanan, dan kontak",
+    "Integrasi WhatsApp / tombol kontak",
+    "Domain & hosting (opsional, sesuai kebutuhan)",
+  ],
+},
+{
+  name: "Silver",
+  price: "Rp 1.200.000 – Rp 3.400.000",
+  subtitle: "Website Profesional untuk Operasional Bisnis",
+  popular: true,
+  description:
+    "Website yang dirancang lebih matang untuk bisnis yang sudah berjalan dan ingin terlihat lebih serius, rapi, serta mudah dikelola.",
+  suitableFor:
+    "Bisnis yang sudah berjalan, company profile, jasa profesional, UMKM berkembang.",
+  features: [
+    "Website multi halaman (profil, layanan, portofolio, kontak, dll)",
+    "Dashboard admin untuk update konten",
+    "Form terhubung WhatsApp / Email",
+    "Struktur konten rapi & SEO friendly",
+    "Desain custom sesuai identitas brand",
+    "Performa & keamanan dasar",
+  ],
+},
+{
+  name: "Gold",
+  price: "Custom (Konsultasi)",
+  subtitle: "Sistem Web & Otomasi Bisnis",
+  description:
+    "Solusi sistem web yang disesuaikan penuh dengan kebutuhan bisnis. Cocok untuk proses yang kompleks, data dinamis, dan integrasi lanjutan.",
+  suitableFor:
+    "Perusahaan, startup, bisnis dengan alur operasional kompleks atau kebutuhan khusus.",
+  features: [
+    "Fitur & sistem disesuaikan kebutuhan bisnis",
+    "Dashboard kompleks & role user",
+    "Manajemen data (CRUD)",
+    "Visualisasi data (chart & laporan)",
+    "Integrasi pembayaran, API, atau sistem pihak ketiga",
+    "Diskusi & perancangan sistem sebelum development",
+  ],
+},
+
 ];
 
 export default function PricingSection() {
@@ -116,7 +127,7 @@ export default function PricingSection() {
                 {plan.subtitle}
               </p>
 
-              <p className="mt-6 text-3xl font-bold text-gray-900">
+              <p className="mt-6 text-2xl text-center font-bold text-gray-900">
                 {plan.price}
               </p>
 
@@ -137,7 +148,7 @@ export default function PricingSection() {
 
               <button
                 onClick={() =>
-                  window.open("https://wa.me/628xxxxxxxxxx", "_blank")
+                  window.open("https://wa.me/6287715371583", "_blank")
                 }
                 className="
                   mt-10 w-full rounded-xl

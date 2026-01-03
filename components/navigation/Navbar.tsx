@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import webku from "@/public/icon.png"
 
 const menus = [
   { label: "Home", href: "#hero" },
@@ -64,7 +65,7 @@ export default function Navbar() {
           {/* CTA */}
           <button
             onClick={() =>
-              window.open("https://wa.me/628xxxxxxxxxx", "_blank")
+              window.open("https://wa.me/6287715371583", "_blank")
             }
             className="
               rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600
