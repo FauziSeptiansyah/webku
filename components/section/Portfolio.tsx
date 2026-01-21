@@ -73,10 +73,10 @@ export default function PortfolioSection() {
           ease: "easeOut",
           }}
           viewport={{ once: true }}
-          className="group relative overflow-hidden rounded-3xl ring-1 ring-black/5 bg-white">
+          className="group relative overflow-hidden rounded-md ring-1 ring-black/5 bg-white">
           {/* IMAGE */}
-  <div className="relative w-full aspect-[16/10] overflow-hidden">
-    <img
+          <div className="relative w-full aspect-[2/1] overflow-hidden">
+           <img
       src={project.image}
       alt={project.title}
       loading="lazy"
@@ -87,53 +87,51 @@ export default function PortfolioSection() {
         group-hover:scale-105
       "
     />
-  </div>
+          </div>
 
-  {/* OVERLAY */}
-  <div
-    className="
-      pointer-events-none
-      absolute inset-0
-      flex flex-col justify-end
-      bg-black/45
-      p-6
-      opacity-0
-      backdrop-blur-sm
-      transition-opacity duration-300
-      group-hover:opacity-100
-    "
-  >
-    <motion.div
-      initial={{ y: 20, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.4, ease: "easeOut" }}
-      className="space-y-2"
-    >
-      <h3 className="text-xl font-semibold text-white">
-        {project.title}
-      </h3>
+          {/* OVERLAY */}
+          <div
+          className="
+          pointer-events-none
+          absolute inset-0
+          flex flex-col justify-end
+           bg-black/45
+          p-6
+          opacity-0
+          backdrop-blur-sm
+          transition-opacity duration-300
+          group-hover:opacity-100"
+          >
+          <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+          className="space-y-2"
+          >
+          <h3 className="text-xl font-semibold text-white">
+          {project.title}
+          </h3>
 
-      <p className="text-sm text-gray-200">
-        {project.description}
-      </p>
+          <p className="text-sm text-gray-200">
+          {project.description}
+          </p>
 
-      <a
-        href={project.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="
+          <a
+          href={project.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
           pointer-events-auto
           inline-flex items-center gap-2
           text-sm font-semibold text-white
-          transition hover:opacity-80
-        "
-      >
-        Lihat Project
-        <ArrowUpRight className="h-4 w-4" />
-      </a>
-    </motion.div>
-  </div>
-</motion.div>
+          transition hover:opacity-80"
+          >
+          Lihat Project
+          <ArrowUpRight className="h-4 w-4" />
+          </a>
+          </motion.div>
+          </div>
+          </motion.div>
 
           ))}
         </div>

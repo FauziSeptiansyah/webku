@@ -10,30 +10,31 @@ import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 
 const stats = [
-  {
-    icon: Briefcase,
-    value: "120+",
-    title: "Proyek Diselesaikan",
-    desc: "Berbagai website dan aplikasi modern untuk berbagai kebutuhan bisnis.",
-  },
-  {
-    icon: Smile,
-    value: "98%",
-    title: "Klien Puas",
-    desc: "Kepuasan klien menjadi fokus utama dalam setiap pengerjaan proyek.",
-  },
-  {
-    icon: Rocket,
-    value: "5+ Tahun",
-    title: "Pengalaman",
-    desc: "Pengalaman dalam UI/UX dan pengembangan frontend modern.",
-  },
-  {
-    icon: ShieldCheck,
-    value: "100%",
-    title: "Aman & Terpercaya",
-    desc: "Kode bersih, scalable, dan mudah dikembangkan di masa depan.",
-  },
+{
+  icon: Briefcase,
+  value: "Meningkatkan Kredibilitas Bisnis",
+  title: "Website yang Dipercaya Klien",
+  desc: "Tampilan profesional dan struktur yang jelas untuk membangun kepercayaan sejak kesan pertama.",
+},
+{
+  icon: Rocket,
+  value: "Performa Website Lebih Cepat",
+  title: "Akses Cepat, Bounce Rate Rendah",
+  desc: "Optimasi kecepatan dan struktur agar pengunjung betah dan mudah mengambil keputusan.",
+},
+{
+  icon: ShieldCheck,
+  value: "Stabil & Aman untuk Jangka Panjang",
+  title: "Fondasi Teknis yang Kuat",
+  desc: "Kode rapi, scalable, dan siap dikembangkan tanpa bikin sistem rapuh di kemudian hari.",
+},
+{
+  icon: Smile,
+  value: "Solusi yang Relevan dengan Kebutuhan",
+  title: "Bukan Sekadar Tampilan",
+  desc: "Website dibangun berdasarkan tujuan bisnis, bukan hanya estetika.",
+},
+
 ];
 
 /* Animation Variants */
@@ -64,10 +65,15 @@ const cardVariants: Variants = {
 export default function StatsSection() {
   return (
     <section className="relative -top-28">
-      <div className="mx-auto max-w-7xl px-6">
+       <div className="mx-auto max-w-7xl px-6">
 
         <motion.div
-          className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"
+          className="
+            grid grid-cols-1 
+            gap-4
+            md:grid-cols-2 
+            lg:grid-cols-4
+          "
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -91,28 +97,23 @@ export default function StatsSection() {
                 "
               >
                 <div className="flex h-full flex-col gap-5 p-8">
-                  
-                  {/* Top Row */}
+
+                  {/* Header: Icon sejajar */}
                   <div className="flex items-start gap-4">
-                    
-                    {/* Icon */}
                     <div
                       className="
-                        flex h-14 w-14 shrink-0 items-center justify-center
-                        rounded-2xl
+                        flex h-11 w-11 shrink-0
+                        items-center justify-center
+                        rounded-lg
                         bg-indigo-600/10 text-indigo-600
                       "
                     >
-                      <Icon className="h-7 w-7" />
+                      <Icon className="h-6 w-6" />
                     </div>
 
-                    {/* Value + Title */}
-                    <div className="space-y-1">
-                      <div className="text-3xl font-bold text-gray-900">
+                    <div className="space-y-0.5">
+                      <div className="text-base font-semibold text-gray-900">
                         {item.value}
-                      </div>
-                      <div className="text-sm font-semibold text-gray-800">
-                        {item.title}
                       </div>
                     </div>
                   </div>
@@ -121,6 +122,7 @@ export default function StatsSection() {
                   <p className="text-sm leading-relaxed text-gray-600">
                     {item.desc}
                   </p>
+
                 </div>
               </motion.div>
             );
